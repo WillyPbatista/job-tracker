@@ -35,6 +35,9 @@ export const useJobStore = defineStore('jobs', () => {
     return jobs.value.filter(j => j.status === status)
   }
 
+
+
+
   return {
     jobs,
     addJob,

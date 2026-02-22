@@ -3,13 +3,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#b100cd',
-          dark: '#8c00a3',
-          light: '#e040ff'
-        }
+    primary: {
+      DEFAULT: "#b100cd",
+      light: "#e05cff",
+      dark: "#7a0091",
+    }
       }
     }
   },
   plugins: []
+}
+export default {
+  darkMode: 'class',
+  content: [
+    "./index.html",
+    "./src/**/*.{vue,js,ts}"
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#b100cd'
+      }
+    }
+  },
+  plugins: [],
 }

@@ -29,13 +29,23 @@ const allowDrop = (e: DragEvent) => {
 
 <template>
   <div
-    class="bg-white/70 backdrop-blur-md border border-purple-100 rounded-3xl p-5 w-80 min-h-[450px] shadow-xl transition"
+    class="bg-white/70 dark:bg-gray-800/70 backdrop-blur-md border border-purple-100 dark:border-gray-700 rounded-3xl p-5 w-80 min-h-[450px] shadow-xl transition-colors duration-300"
     @dragover="allowDrop"
     @drop="handleDrop"
   >
-<h2 class="font-bold mb-5 text-center text-primary text-lg tracking-wide">
-  {{ title }}
-</h2>
+    <div class="flex items-center gap-2 mb-4">
+      <slot name="icon" />
+
+      <h2 class="font-semibold text-gray-700 dark:text-gray-200">
+        {{ title }}
+      </h2>
+
+      <span
+        class="text-xs px-2 py-1 rounded-full bg-primary/10 dark:bg-primary-light/10 text-primary"
+      >
+        {{ jobs.length }}
+      </span>
+    </div>
 
     <JobCard v-for="job in jobs" :key="job.id" :job="job" />
   </div>

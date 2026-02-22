@@ -92,7 +92,7 @@ defineExpose({ open });
 
         <button
           @click="handleSubmit"
-          class="px-5 py-2 rounded-xl bg-gradient-to-r from-primary to-primary-light text-white hover:opacity-90 transition"
+          class="px-5 py-2 rounded-xl bg-primary text-white hover:opacity-90 transition"
         >
           Save
         </button>
